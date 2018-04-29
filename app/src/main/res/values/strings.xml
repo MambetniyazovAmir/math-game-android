@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Matematika</string>
-    <string name="minus">Ayirish</string>
-    <string name="plus">Qo\'shish</string>
-    <string name="divide">Bo\'lish</string>
-    <string name="multiply">Ko\'paytirish</string>
+    <string name="minus">Ayirish (-)</string>
+    <string name="plus">Qo\'shish (+)</string>
+    <string name="divide">Bo\'lish (÷)</string>
+    <string name="multiply">Ko\'paytirish (×)</string>
     <string name="todo">TODO</string>
 </resources>

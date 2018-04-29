@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int PLUS_BUTTON = 2;
     public static final int DIVIDE_BUTTON = 3;
     public static final int MULTIPLY_BUTTON = 4;
-    public static final String EXTRA_BUTTON_TYPE = "EXTRA_BUTTON_TYPE";
+    public static final String EXTRA_BUTTON_TYPE = "extraButtonType";
 
     private Button minusBtn, plusBtn, divideBtn, multiplyBtn;
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getBaseContext(), GameActivity.class);
+            Intent intent = new Intent(MainActivity.this, GameActivity.class);
             if (view == minusBtn) {
                 intent.putExtra(EXTRA_BUTTON_TYPE, MINUS_BUTTON);
             } else if (view == plusBtn) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             } else if (view == divideBtn) {
                 intent.putExtra(EXTRA_BUTTON_TYPE, DIVIDE_BUTTON);
             } else if (view == multiplyBtn) {
-                intent.putExtra(EXTRA_BUTTON_TYPE, DIVIDE_BUTTON);
+                intent.putExtra(EXTRA_BUTTON_TYPE, MULTIPLY_BUTTON);
             } else {
                 return;
             }

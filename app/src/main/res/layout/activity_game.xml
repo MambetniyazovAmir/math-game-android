@@ -2,8 +2,69 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.dasturlash.matematika.game.GameActivity">
 
+    <LinearLayout
+        android:id="@+id/customViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/line"
+        app:layout_constraintTop_toTopOf="@+id/container"
+        app:layout_constraintLeft_toLeftOf="@+id/container"
+        app:layout_constraintRight_toRightOf="@+id/container"/>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorRed"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/variantA" />
+
+    <Button
+        android:id="@+id/variantA"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/variantC"
+        app:layout_constraintLeft_toLeftOf="@+id/variantC"
+        app:layout_constraintRight_toRightOf="@+id/variantC" />
+
+    <Button
+        android:id="@+id/variantB"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/variantD"
+        app:layout_constraintLeft_toLeftOf="@+id/variantD"
+        app:layout_constraintRight_toRightOf="@+id/variantD" />
+
+    <Button
+        android:id="@+id/variantC"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        app:layout_constraintLeft_toLeftOf="@+id/container"
+        app:layout_constraintRight_toLeftOf="@+id/variantD" />
+
+    <Button
+        android:id="@+id/variantD"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
+        app:layout_constraintLeft_toRightOf="@+id/variantC"
+        app:layout_constraintRight_toRightOf="@+id/container" />
 </android.support.constraint.ConstraintLayout>
