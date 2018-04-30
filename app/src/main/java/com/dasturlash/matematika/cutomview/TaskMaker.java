@@ -2,6 +2,7 @@ package com.dasturlash.matematika.cutomview;
 import android.util.Log;
 
 import com.dasturlash.matematika.MainActivity;
+import com.dasturlash.matematika.game.VariantListener;
 import com.dasturlash.matematika.holders.NumberHolder;
 import java.util.Random;
 
@@ -15,6 +16,7 @@ public class TaskMaker {
     private Integer firstNumber;
     private Integer secondNumber;
     private int[] variants;
+    private int correctVariant;
     private char[] operator;
     private Random random;
 
@@ -43,11 +45,11 @@ public class TaskMaker {
 
     private void makeTaskFotDivide() {
         NumberHolder numberHolder = NumberHolder.getInstance();
-        int index = random.nextInt(numberHolder.getDividends().size()-1);
+        Integer index = random.nextInt(numberHolder.getDividends().size()-1);
         firstNumber = numberHolder.getDividends().get(index);
-        index = random.nextInt(numberHolder.getDividers(firstNumber).size()-1);
+        index = numberHolder.getDividers(firstNumber).size() <= 1 ? 0 : random.nextInt(numberHolder.getDividers(firstNumber).size()-1);
         secondNumber = numberHolder.getDividers(firstNumber).get(index);
-        Log.d("dividers", firstNumber.toString() + "->" + numberHolder.getDividers(firstNumber));
+
     }
 
     void getTask() {
@@ -64,5 +66,17 @@ public class TaskMaker {
         }
         String task = firstNumber.toString() + operator[type] + secondNumber.toString();
         customViewInterface.setTask(task);
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public Integer getFirstNumber() {
+        return firstNumber;
+    }
+
+    public Integer getSecondNumber() {
+        return secondNumber;
     }
 }

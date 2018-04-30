@@ -55,18 +55,14 @@ public final class NumberHolder {
     }
 
     public ArrayList<Integer> getDividers(Integer number) {
-        for (int i = 0; i < dividers.size(); i++) {
-            Integer key = dividers.keyAt(i);
-            Log.d("HashMap", key.toString() + "->" + dividers.valueAt(i));
-        }
         return dividers.get(number);
     }
 
     private void setDividers() {
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> list;
         for (int i = 2; i <= ERATOSFEN_NUMBER_COUNT; i++) {
             if (isDividend[i]) {
-                list.clear();
+                list = new ArrayList<>();
                 for (int j = 2; j * j <= i; j++) {
                     if (i%j == 0) {
                         list.add(j);

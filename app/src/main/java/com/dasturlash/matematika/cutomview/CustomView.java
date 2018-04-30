@@ -21,10 +21,14 @@ import com.dasturlash.matematika.R;
 public class CustomView extends LinearLayout implements CustomViewInterface {
     private TaskMaker taskMaker;
     private TextView text;
+    private Integer firstNumber;
+    private Integer secondNumber;
+    private int type;
 
     @SuppressLint("ResourceAsColor")
     public CustomView(Context context, int type, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        this.type = type;
         taskMaker = new TaskMaker(this, type);
         View view = LayoutInflater.from(context).inflate(R.layout.view_custom, this);
         text = view.findViewById(R.id.text);
@@ -38,5 +42,19 @@ public class CustomView extends LinearLayout implements CustomViewInterface {
     @Override
     public void setTask(String task) {
         text.setText(task);
+    }
+
+    public Integer getFirstNumber() {
+        firstNumber = taskMaker.getFirstNumber();
+        return firstNumber;
+    }
+
+    public Integer getSecondNumber() {
+        secondNumber = taskMaker.getSecondNumber();
+        return secondNumber;
+    }
+
+    public int getType() {
+        return type;
     }
 }
