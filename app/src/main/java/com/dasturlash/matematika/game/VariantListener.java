@@ -5,5 +5,5 @@ package com.dasturlash.matematika.game;
  */
 
 public interface VariantListener {
-    public void setVariants(int[] variants);
+    public void setVariants(Integer[] variants);
 }

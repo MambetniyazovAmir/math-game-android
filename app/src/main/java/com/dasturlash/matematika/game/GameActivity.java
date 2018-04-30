@@ -1,5 +1,6 @@
 package com.dasturlash.matematika.game;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -31,7 +32,6 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
         variantD = findViewById(R.id.variantD);
         linearLayout = findViewById(R.id.customViewContainer);
         nextTask(getIntent().getIntExtra(MainActivity.EXTRA_BUTTON_TYPE, 0));
-        variantMaker = new VariantMaker(customView.getFirstNumber(), customView.getSecondNumber(), customView.getType(), this);
     }
 
     private void nextTask(int type) {
@@ -39,6 +39,8 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
             customView = null;
         }
         customView = new CustomView(GameActivity.this, type, null);
+        variantMaker = new VariantMaker(customView.getFirstNumber(), customView.getSecondNumber(), customView.getType(), this);
+        variantMaker.makeVariants();
         linearLayout.addView(customView);
         startAnimation(customView);
     }
@@ -49,11 +51,12 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
         view.startAnimation(animation);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void setVariants(int[] variants) {
-        variantA.setText(variants[0]);
-        variantB.setText(variants[1]);
-        variantC.setText(variants[2]);
-        variantD.setText(variants[3]);
+    public void setVariants(Integer[] variants) {
+        variantA.setText(variants[0].toString());
+        variantB.setText(variants[1].toString());
+        variantC.setText(variants[2].toString());
+        variantD.setText(variants[3].toString());
     }
 }
