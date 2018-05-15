@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontal_layout_margin">16dp</dimen>
+    <dimen name="vertical_game_over_layout_margin">100dp</dimen>
+    <dimen name="game_over_text_size">26sp</dimen>
+</resources>

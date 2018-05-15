@@ -1,6 +1,8 @@
 package com.dasturlash.matematika.game;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -12,15 +14,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.dasturlash.matematika.MainActivity;
 import com.dasturlash.matematika.R;
 import com.dasturlash.matematika.cutomview.CustomView;
+import com.dasturlash.matematika.defeat.DefeatActivity;
 import com.dasturlash.matematika.level.LevelHelper;
 
 import java.util.Objects;
-import java.util.Random;
 
 public class GameActivity extends AppCompatActivity implements VariantListener {
     private VariantMaker variantMaker;
@@ -34,12 +35,14 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
     private LevelHelper levelHelper;
     private Animation animation;
     private int type;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        levelHelper = new LevelHelper();
+        context = this;
+        levelHelper = new LevelHelper(this);
         variantA = findViewById(R.id.variantA);
         variantB = findViewById(R.id.variantB);
         variantC = findViewById(R.id.variantC);
@@ -91,10 +94,12 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
             if (Objects.equals(((Button) view).getText().toString(), correctVariant.toString())) {
                 nextTask(type);
             } else {
-                //TODO utilg'anda ne boliwi usi jerge jaziladi
-                
-                return;
+                Intent intent = new Intent(context, DefeatActivity.class);
+                intent.putExtra(DefeatActivity.CURRENT_TYPE, type);
+                intent.putExtra(DefeatActivity.CURRENT_LEVEL, levelHelper.getLevel());
+                startActivity(intent);
             }
         }
     };
+
 }

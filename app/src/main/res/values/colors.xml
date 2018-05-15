@@ -5,8 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorRed">#ff0000</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="colorCustomViewDefault">#2AA1DD</color>
+    <color name="colorCustomViewDefault">#64B3F5</color>
     <color name="colorCustomViewError">#D63B32</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="white">#fff</color>
+    <color name="yellow">#FFD05C</color>
 </resources>
