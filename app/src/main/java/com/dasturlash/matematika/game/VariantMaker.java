@@ -37,7 +37,7 @@ class VariantMaker {
         for (int i = 0; i < 4; i++) {
             int index = random.nextInt(3);
             int temp = variants[i];
-            variants[i] = variants[index];
+            variants[i] = variants[index]; 
             variants[index] = temp;
         }
     }
@@ -85,7 +85,7 @@ class VariantMaker {
         return variants[3];
     }
 
-    public Integer getCorrectVariant() {
+    Integer getCorrectVariant() {
         return correctVariant;
     }
 }

@@ -5,4 +5,8 @@
     <string name="divide">Bo\'lish (÷)</string>
     <string name="multiply">Ko\'paytirish (×)</string>
     <string name="todo">TODO</string>
+
+    <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
