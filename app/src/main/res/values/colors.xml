@@ -7,4 +7,6 @@
     <color name="colorWhite">#ffffff</color>
     <color name="colorCustomViewDefault">#2AA1DD</color>
     <color name="colorCustomViewError">#D63B32</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

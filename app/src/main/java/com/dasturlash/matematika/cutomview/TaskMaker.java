@@ -1,9 +1,6 @@
 package com.dasturlash.matematika.cutomview;
-import android.util.Log;
 
 import com.dasturlash.matematika.MainActivity;
-import com.dasturlash.matematika.game.VariantListener;
-import com.dasturlash.matematika.holders.NumberHolder;
 import java.util.Random;
 
 /**
@@ -15,8 +12,6 @@ public class TaskMaker {
     private int type;
     private Integer firstNumber;
     private Integer secondNumber;
-    private int[] variants;
-    private int correctVariant;
     private char[] operator;
     private Random random;
 
@@ -24,7 +19,6 @@ public class TaskMaker {
         this.customViewInterface = customViewInterface;
         this.type = type;
         random = new Random();
-        variants = new int[4];
         operator = new char[]{'0', '-', '+', '÷', '×'};
     }
 
@@ -44,12 +38,9 @@ public class TaskMaker {
     }
 
     private void makeTaskFotDivide() {
-        NumberHolder numberHolder = NumberHolder.getInstance();
-        Integer index = random.nextInt(numberHolder.getDividends().size()-1);
-        firstNumber = numberHolder.getDividends().get(index);
-        index = numberHolder.getDividers(firstNumber).size() <= 1 ? 0 : random.nextInt(numberHolder.getDividers(firstNumber).size()-1);
-        secondNumber = numberHolder.getDividers(firstNumber).get(index);
-
+        int x = random.nextInt(30) + 5;
+        secondNumber = random.nextInt(50/x) + 2;
+        firstNumber = secondNumber*x;
     }
 
     void getTask() {
