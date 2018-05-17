@@ -55,7 +55,7 @@ public class TaskMaker {
         } else {
             return;
         }
-        String task = firstNumber.toString() + operator[type] + secondNumber.toString();
+        String task = firstNumber.toString() + " " + operator[type] + " " + secondNumber.toString();
         customViewInterface.setTask(task);
     }
 

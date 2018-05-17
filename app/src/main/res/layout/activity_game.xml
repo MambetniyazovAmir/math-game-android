@@ -13,9 +13,34 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/line"
-        app:layout_constraintTop_toTopOf="@+id/container"
         app:layout_constraintLeft_toLeftOf="@+id/container"
-        app:layout_constraintRight_toRightOf="@+id/container"/>
+        app:layout_constraintRight_toRightOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="@dimen/horizontal_layout_margin"
+        android:gravity="center"
+        android:minWidth="30dp"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container" />
+
+    <ImageView
+        android:id="@+id/score_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/konfet"
+        app:layout_constraintRight_toLeftOf="@+id/score_text"
+        app:layout_constraintTop_toTopOf="@+id/score_text" />
 
     <LinearLayout
         android:id="@+id/line"
@@ -29,23 +54,31 @@
     <Button
         android:id="@+id/variantA"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         app:layout_constraintBottom_toTopOf="@+id/variantC"
         app:layout_constraintLeft_toLeftOf="@+id/variantC"
-        app:layout_constraintRight_toRightOf="@+id/variantC" />
+        app:layout_constraintRight_toRightOf="@+id/variantC"
+        android:background="@drawable/roundedview"
+        android:layout_marginBottom="@dimen/margin_button"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/variantB"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="@dimen/margin_button"
         app:layout_constraintBottom_toTopOf="@+id/variantD"
         app:layout_constraintLeft_toLeftOf="@+id/variantD"
-        app:layout_constraintRight_toRightOf="@+id/variantD" />
+        app:layout_constraintRight_toRightOf="@+id/variantD"
+        android:background="@drawable/roundedview"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/variantC"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="4dp"
         android:layout_marginLeft="16dp"
@@ -53,12 +86,16 @@
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintLeft_toLeftOf="@+id/container"
-        app:layout_constraintRight_toLeftOf="@+id/variantD" />
+        app:layout_constraintRight_toLeftOf="@+id/variantD"
+        android:background="@drawable/roundedview"
+        android:layout_marginTop="@dimen/margin_button"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/variantD"
         android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginLeft="4dp"
@@ -66,5 +103,8 @@
         android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintLeft_toRightOf="@+id/variantC"
-        app:layout_constraintRight_toRightOf="@+id/container" />
+        app:layout_constraintRight_toRightOf="@+id/container"
+        android:background="@drawable/roundedview"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"/>
 </android.support.constraint.ConstraintLayout>

@@ -71,4 +71,8 @@ public class CustomView extends LinearLayout implements CustomViewInterface {
     public int getType() {
         return type;
     }
+
+    public void reset() {
+        taskMaker.getTask();
+    }
 }

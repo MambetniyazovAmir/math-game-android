@@ -5,5 +5,5 @@ package com.dasturlash.matematika.cutomview;
  */
 
 public interface CustomViewInterface {
-    public void setTask(String task);
+    void setTask(String task);
 }

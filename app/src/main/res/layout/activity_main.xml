@@ -25,12 +25,20 @@
         android:text="@string/plus"
         app:layout_constraintBottom_toTopOf="@+id/minusBtn"
         app:layout_constraintLeft_toLeftOf="@+id/container"
-        app:layout_constraintRight_toRightOf="@+id/container" />
+        app:layout_constraintRight_toRightOf="@+id/container"
+        android:background="@drawable/roundedview"
+        android:layout_marginBottom="@dimen/margin_button"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/minusBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:background="@drawable/roundedview"
+        android:textColor="@color/white"
+        android:textSize="@dimen/button_text_size"
+        android:layout_marginBottom="@dimen/margin_button"
         android:text="@string/minus"
         app:layout_constraintBottom_toTopOf="@+id/multiplyBtn"
         app:layout_constraintLeft_toLeftOf="@+id/container"
@@ -40,15 +48,22 @@
         android:id="@+id/multiplyBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"
+        android:background="@drawable/roundedview"
         android:text="@string/multiply"
         app:layout_constraintBottom_toTopOf="@+id/divideBtn"
         app:layout_constraintLeft_toLeftOf="@id/container"
-        app:layout_constraintRight_toRightOf="@+id/container" />
+        app:layout_constraintRight_toRightOf="@+id/container"
+        android:layout_marginBottom="@dimen/margin_button"/>
 
     <Button
         android:id="@+id/divideBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
+        android:textSize="@dimen/button_text_size"
+        android:textColor="@color/white"
+        android:background="@drawable/roundedview"
         android:layout_marginBottom="50dp"
         android:text="@string/divide"
         app:layout_constraintBottom_toBottomOf="@+id/container"
