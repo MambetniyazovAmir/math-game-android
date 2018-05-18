@@ -2,7 +2,6 @@ package com.dasturlash.matematika.defeat;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -110,4 +109,5 @@ public class DefeatActivity extends AppCompatActivity implements DefeatView {
         mediaPlayer = MediaPlayer.create(getApplicationContext(), resId);
         mediaPlayer.start();
     }
+
 }
