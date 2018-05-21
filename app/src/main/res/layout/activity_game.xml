@@ -5,7 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dasturlash.matematika.game.GameActivity">
+    tools:context="com.dasturlash.matematika.game.GameActivity"
+    android:background="@color/colorCustomViewDefault">
 
     <LinearLayout
         android:id="@+id/customViewContainer"
@@ -28,7 +29,7 @@
         android:layout_marginTop="@dimen/horizontal_layout_margin"
         android:gravity="center"
         android:minWidth="30dp"
-        android:textColor="#000000"
+        android:textColor="#ffffff"
         android:textSize="20sp"
         app:layout_constraintRight_toRightOf="@+id/container"
         app:layout_constraintTop_toTopOf="@+id/container" />
@@ -58,7 +59,7 @@
         app:layout_constraintBottom_toTopOf="@+id/variantC"
         app:layout_constraintLeft_toLeftOf="@+id/variantC"
         app:layout_constraintRight_toRightOf="@+id/variantC"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:layout_marginBottom="@dimen/margin_button"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"/>
@@ -71,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@+id/variantD"
         app:layout_constraintLeft_toLeftOf="@+id/variantD"
         app:layout_constraintRight_toRightOf="@+id/variantD"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"/>
 
@@ -87,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintLeft_toLeftOf="@+id/container"
         app:layout_constraintRight_toLeftOf="@+id/variantD"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:layout_marginTop="@dimen/margin_button"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"/>
@@ -104,7 +105,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintLeft_toRightOf="@+id/variantC"
         app:layout_constraintRight_toRightOf="@+id/container"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"/>
 </android.support.constraint.ConstraintLayout>

@@ -5,7 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dasturlash.matematika.MainActivity">
+    tools:context="com.dasturlash.matematika.MainActivity"
+    android:background="@color/colorCustomViewDefault">
 
     <ImageView
         android:id="@+id/image"
@@ -26,7 +27,7 @@
         app:layout_constraintBottom_toTopOf="@+id/minusBtn"
         app:layout_constraintLeft_toLeftOf="@+id/container"
         app:layout_constraintRight_toRightOf="@+id/container"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:layout_marginBottom="@dimen/margin_button"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"/>
@@ -35,7 +36,7 @@
         android:id="@+id/minusBtn"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:textColor="@color/white"
         android:textSize="@dimen/button_text_size"
         android:layout_marginBottom="@dimen/margin_button"
@@ -50,7 +51,7 @@
         android:layout_height="50dp"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:text="@string/multiply"
         app:layout_constraintBottom_toTopOf="@+id/divideBtn"
         app:layout_constraintLeft_toLeftOf="@id/container"
@@ -63,7 +64,7 @@
         android:layout_height="50dp"
         android:textSize="@dimen/button_text_size"
         android:textColor="@color/white"
-        android:background="@drawable/roundedview"
+        android:background="@drawable/roundbutton"
         android:layout_marginBottom="50dp"
         android:text="@string/divide"
         app:layout_constraintBottom_toBottomOf="@+id/container"

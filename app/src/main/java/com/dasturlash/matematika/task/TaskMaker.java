@@ -1,4 +1,4 @@
-package com.dasturlash.matematika.cutomview;
+package com.dasturlash.matematika.task;
 
 import com.dasturlash.matematika.MainActivity;
 import java.util.Random;

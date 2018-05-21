@@ -1,10 +1,12 @@
-package com.dasturlash.matematika.cutomview;
+package com.dasturlash.matematika.task;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -22,8 +24,6 @@ import java.util.Random;
 public class CustomView extends LinearLayout implements CustomViewInterface {
     private TaskMaker taskMaker;
     private TextView text;
-    private Integer firstNumber;
-    private Integer secondNumber;
     private View view;
     private int type;
 
@@ -40,11 +40,12 @@ public class CustomView extends LinearLayout implements CustomViewInterface {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        Display display = ((Activity) view.getContext()).getWindowManager().getDefaultDisplay();
         LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) getLayoutParams();
         @SuppressLint("DrawAllocation") Random random = new Random();
-        int width = 400;
+        int width = display.getWidth();
         Log.d("width", width + "");
-        int margin = random.nextInt(width) + 50;
+        int margin = random.nextInt(width - 250) + 50;
         layoutParams.setMargins(margin, 0,0, 0);
         setLayoutParams(layoutParams);
     }
@@ -59,12 +60,12 @@ public class CustomView extends LinearLayout implements CustomViewInterface {
     }
 
     public Integer getFirstNumber() {
-        firstNumber = taskMaker.getFirstNumber();
+        Integer firstNumber = taskMaker.getFirstNumber();
         return firstNumber;
     }
 
     public Integer getSecondNumber() {
-        secondNumber = taskMaker.getSecondNumber();
+        Integer secondNumber = taskMaker.getSecondNumber();
         return secondNumber;
     }
 

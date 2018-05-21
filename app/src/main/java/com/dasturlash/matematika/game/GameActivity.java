@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import com.dasturlash.matematika.MainActivity;
 import com.dasturlash.matematika.R;
-import com.dasturlash.matematika.cutomview.CustomView;
+import com.dasturlash.matematika.task.CustomView;
 import com.dasturlash.matematika.defeat.DefeatActivity;
 import com.dasturlash.matematika.helper.LevelHelper;
 
@@ -136,6 +136,7 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
                 nextTask(type);
             } else {
                 isDefeated = true;
+
                 playMusic(R.raw.incorrect);
                 onDefeat();
             }
@@ -143,10 +144,15 @@ public class GameActivity extends AppCompatActivity implements VariantListener {
     };
 
     private void playMusic(int resId) {
-        mediaPlayer.selectTrack(resId);
-        if (mediaPlayer != null) {
-            mediaPlayer.start();
+        try {
+            mediaPlayer.selectTrack(resId);
+            if (mediaPlayer != null) {
+                mediaPlayer.start();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+
     }
 
     @Override

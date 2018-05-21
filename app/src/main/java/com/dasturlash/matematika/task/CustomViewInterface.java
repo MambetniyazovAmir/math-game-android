@@ -1,4 +1,4 @@
-package com.dasturlash.matematika.cutomview;
+package com.dasturlash.matematika.task;
 
 /**
  * Created by QAREKEN on 4/30/2018.
